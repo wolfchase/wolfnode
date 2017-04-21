@@ -1,6 +1,9 @@
 ---
 title: About
 ---
+
+<h1>About</h1>
+
 ### The Name's Rodolfo
 
 But you can call me Rudy. I'm a UCSC student majoring in Computer Science with
