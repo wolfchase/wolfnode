@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>rvallada | Upcoming</title>
+        <link rel="stylesheet" href="../css/default.css" />
+        <link href="https://fonts.googleapis.com/css?family=Sanchez|Libre+Franklin|Nunito|Roboto+Mono|Open+Sans" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                <a href="../"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
+            </div>
+            <div id="navigation">
+                <a href="../about.html">about</a>
+                <a href="../contact.html">contact</a>
+                <a href="../archive.html">archive</a>
+            </div>
+        </div>
+
+        <div id="content">
+            <h1 id="post-header">Upcoming</h1>
+
+<div class="info">
+    Posted on April 30, 2017
+    
+</div>
+
+<p>In my previous post, I mentioned work that I’d be doing on the website. However I failed to pinpoint exactly what I’d be up to immediately, so I’m here to remedy that.</p>
+<h2 id="the-website">The Website</h2>
+<h3 id="tags-on-top-of-the-priority-list">Tags on Top of the Priority List</h3>
+<p>The next thing I want to implement on the site is post tagging. This will allow me to categorize my posts so that they are easier to find and read. This ground work will allow for other cool features I am wanting to implement (we’ll get to those soon). However, this brings up the question of how to implement post ids for my disqus integration.</p>
+<p>Currently, each post has a hand crafted id. There are several problems that will arise from this if I implement post tags. Firstly, and the biggest issue, is keeping post ids from colliding. A side effect of post tagging I’d like to have is having equivalent post names but with different tags. With the current system of post identifying, this would result in post id collision in disqus.</p>
+<p>The other problem is, keeping track of post ids by hand. It will be become quite arduous at some point to maintain the ids by hand.</p>
+<p>Gladly, solving these issues can probably be done with one stone. Namely, I can have the haskell post compiler generate a post id that is a combination of the post’s name and tag. This would be a very clean solution, but I am hesitant to enable it for embedded categorization. If I find the need to tag tagged posts, I will consider this in the future. So far, I have no need for it yet.</p>
+<p>Let’s talk about those other features!</p>
+<h3 id="nextprevious-post-buttons">Next/Previous Post Buttons</h3>
+<p>This one is a no brainer; who doesn’t want next or previous buttons for sequential post reading! The problem is finding a way to sort posts, especially when they are categorized. I don’t want to goof off on this feature in case I do implement embedded tags, I can already tell it’ll be a pain to rework this feature.</p>
+<h3 id="category-based-searching">Category Based Searching</h3>
+<p>Searching for posts with tags should help readers to better pinpoint posts. The only problem is, the website is static. We can’t post request for a search so I’ll have to get creative with my javascript-fu. What comes to mind is generating pages for specific tags, and including all the posts associated. Then we can have a search bar with a javascript frontend that will scrape away non-matching posts from the page. These will be kept in a vector, so they can be placed back onto the page when the user ‘cancels’ the current query.</p>
+<p>Maybe its time to bring out that vue.js again.</p>
+<h2 id="other-projects-that-are-not-the-website">Other Projects (that are not the website)</h2>
+<p>I haven’t exactly worked on any pet projects recently. This has been due mostly to a lack of motivation. I will do my best to change that this quarter and this upcoming summer.</p>
+<p>There are three things I want to accomplish (if possible). I want to learn Rust, more OS dev, learn to manage bigger projects and have fun. I’m not sure how I’ll accomplish these things, but I have currently set out a few things to do for myself in the meantime.</p>
+<h3 id="rain-my-old-irc-project">Rain (my old IRC project)</h3>
+<p>This project was a blast to work on. Sadly, I just didn’t find the time on IRC to find much motivation near the end before the project went stale. I want to change that by moving the project to the Discord world.</p>
+<p>I will keep much of the current structure the same, but I will repurpose the plugin system to something that I believe to be pretty cool.</p>
+<p>I’ll be doing my best to keep my golang skills sharp as I go along. Especially my goroutine habits, they need a lot of work still.</p>
+<h3 id="ardets">ARDeTS</h3>
+<p>I wouldn’t do a web development based project, but this one is a little special to me. Based off the work I did for a class, I want to plunge this idea into the wild. I have a working prototype (and I mean prototype), but it currently uses python and the web2py framework. I’m not too keen on using python, but if I have to, I’d be willing to try out Django.</p>
+<p>I’m also currently looking at Elixir/Phoenix or Go/Revel. But it might end up being Python/Django. Whatever happens in the end, I’ll probably post about it.</p>
+<p>And no I’m not using Haskell/Yesod.</p>
+<h2 id="i-still-have-to-college-though">I Still Have to College Though</h2>
+<p>Sadly, I’m still in college and my time is limited. So don’t go off expecting anything big soon, maybe the tags. And also maybe the first C post tutorial for that C tutorial series. Other than that, I have midterms to study for.</p>
+<p>Have a day! (I’m starving and grumpy)</p>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+this.page.url = document.querySelector("link[rel='canonical']").getAttribute("href");  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "/ucsc-rvallada-upcoming/"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://wolfnode.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+        <div id="footer">
+            ©2017 Rodolfo Castillo-Valladares | Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll">Hakyll</a>
+        </div>
+    </body>
+</html>
