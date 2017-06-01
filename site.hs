@@ -13,6 +13,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "fonts/*" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     match "doc/*" $ do
         route   idRoute
         compile copyFileCompiler

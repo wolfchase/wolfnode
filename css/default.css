@@ -1,3 +1,15 @@
+@font-face {
+    font-family: Mission Gothic;
+    letter-spacing: 1px;
+    src: url("../fonts/MissionGothicRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Mission Gothic;
+    font-weight: bold;
+    src: url("./fonts/MissionGothicBold.otf") format("opentype");
+}
+
 body {
     padding: 5px;
     color: black;
@@ -57,8 +69,9 @@ div#header #navigation {
 
 div#header #navigation a {
     color: black;
-    font-family: Reenie Beanie;
-    font-size: 36px;
+    font-family: Mission Gothic;
+    letter-spacing: 0.02em;
+    font-size: 18px;
     margin-left: 12px;
     text-decoration: none;
 }
@@ -87,7 +100,8 @@ div#content p {
 }
 
 div#content h1 {
-    font-family: Sanchez;
+    font-family: Mission Gothic;
+    letter-spacing: 0.02em;
     color: #147294;
     font-weight: normal;
     font-size: 40px;
@@ -103,7 +117,8 @@ div#content h1#home {
 }
 
 div#content h2 {
-    font-family: Sanchez;
+    font-family: Mission Gothic;
+    letter-spacing: 0.02em;
     color: #147294;
     font-weight: normal;
     font-size: 30px;
@@ -112,7 +127,8 @@ div#content h2 {
 div#content h3 {
     border-left: 5px solid lightblue;
     padding-left: 10px;
-    font-family: Sanchez;
+    font-family: Mission Gothic;
+    letter-spacing: 0.02em;
     color: Black;
     font-weight: normal;
     font-size: 22px;
@@ -120,7 +136,8 @@ div#content h3 {
 
 div#content p.home-p {
     font-size: 28px;
-    font-family: Sanchez;
+    font-family: Mission Gothic;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 
