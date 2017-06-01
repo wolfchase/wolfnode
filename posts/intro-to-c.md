@@ -1,12 +1,13 @@
 ---
 title: Intro to C 
 date: 2017-05-11
+tags: c-tut-series
 post-id: intro-to-c 
 ---
 
 As promised, the first post in my C tutorial series is here!
 
-# C (and Why You Should Learn It)
+## C (and Why You Should Learn It)
 
 The biggest reason I believe any programmer should have C under their belt, is
 mostly for the fact that they might not deal with assembly as much as
@@ -49,7 +50,7 @@ just enough.
 
 It's about time we get our hands dirty!
 
-# Anatomy of a C Program
+## Anatomy of a C Program
 
 <script src="https://gist.github.com/wolfchase/2b0ddec1c2440ff8a437700da3c93ace.js"></script>
 
@@ -110,17 +111,22 @@ stick to using ideone.com, an online compiler. As a matter of fact, the program
 is online ready for editing and compiling [here](http://ideone.com/FTzSy9). Play
 around with it if you want and get accustommed to ideone as well.
 
-# Well That's it (For Now)
+## Well That's it (For Now)
 
 I'll be creating what I call _specials_. These will be posts that talk about
 things that might be too much to talk about in the tutorial series, but
 definitely worth checking out. The first one will be coming around sooner than
 later and will involve installing a C compiler on your system.
 
+And if you're a newcomer to programming, be not afraid to drop questions below
+in the comments. I'll be more than happy to answer them. Also, the material here
+was very general, and some of it might seem daunting. I'll do my best to be as
+clear and concise in future posts. I'll be able to afford the extra elaborations
+due to keeping things consolidated to certain topics. The next post will be all
+about data types.
+
 I also hope that this becomes a do-and-learn experience. I'll do my best to
 increase the quality of these posts as much as I can! With that I let you all be
 and hope that you'll continue to join me on one hell of an adventure.
-
-
 
 

@@ -17,16 +17,19 @@ div#home-posts-container ul {
 }
 
 div#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
 
-div#logo a {
-    color: black;
-    float: left;
-    font-family: Libre Franklin;
-    font-size: 18px;
-    text-decoration: none;
+div#logo {
+    width: 100px;
+}
+ 
+div#logo img {
+    width: 100px;
 }
 
 div#header #navigation {
@@ -36,7 +39,7 @@ div#header #navigation {
 div#header #navigation a {
     color: black;
     font-family: Libre Franklin;
-    font-size: 15px;
+    font-size: 19px;
     margin-left: 12px;
     text-decoration: none;
 }
@@ -69,6 +72,7 @@ div#content h1 {
     color: #147294;
     font-weight: normal;
     font-size: 40px;
+    text-align: center;
 }
 
 
@@ -104,6 +108,14 @@ div#content code {
     color: #105a75;
 }
 
+div#resume {
+    margin-top: 20px;
+}
+
+#resume-href {
+    color:#105a75 !important;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -115,4 +127,5 @@ h2 {
 div.info {
     color: #555;
     font-size: 14px;
+    text-align: center;
 }

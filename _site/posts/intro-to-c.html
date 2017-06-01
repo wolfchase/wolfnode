@@ -12,10 +12,12 @@
     <body>
         <div id="header">
             <div id="logo">
-                <a href="../"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
+                <img src="../images/me.png" />
             </div>
             <div id="navigation">
+                <a href="../index.html">home</a>
                 <a href="../about.html">about</a>
+                <a href="../resume.html" id="resume-href">resume</a>
                 <a href="../contact.html">contact</a>
                 <a href="../archive.html">archive</a>
             </div>
@@ -28,9 +30,14 @@
     Posted on May 11, 2017
     
 </div>
+<div class="info">
+    
+    Tags: <a href="../tags/c-tut-series.html">c-tut-series</a>
+    
+</div>
 
 <p>As promised, the first post in my C tutorial series is here!</p>
-<h1 id="c-and-why-you-should-learn-it">C (and Why You Should Learn It)</h1>
+<h2 id="c-and-why-you-should-learn-it">C (and Why You Should Learn It)</h2>
 <p>The biggest reason I believe any programmer should have C under their belt, is mostly for the fact that they might not deal with assembly as much as programmers from the past did.</p>
 <p>Sure this is a good thing, but it has developed a generation of programmers willing to give up efficient programming over compiler optimizations. This works for the most part, but it provides a false confidence that can be serious if not looked after. Programmers from the past had to be conscious about every line of code they created.</p>
 <p>They had very limited resources (time, storage, accessibility) and usually had to make sure they got things right the first time. This skill is invaluable and quickly fading away.</p>
@@ -41,7 +48,7 @@
 <p>This is only one example of how C has influenced other languages. Sometimes other languages try to take a jack hammer to a problem, and C’s simplicity is just enough.</p>
 <h3 id="but-enough-talk">But Enough Talk</h3>
 <p>It’s about time we get our hands dirty!</p>
-<h1 id="anatomy-of-a-c-program">Anatomy of a C Program</h1>
+<h2 id="anatomy-of-a-c-program">Anatomy of a C Program</h2>
 <script src="https://gist.github.com/wolfchase/2b0ddec1c2440ff8a437700da3c93ace.js"></script>
 <p>A small down-to-the-ground barebones C program. Before we go off compiling this, let’s talk about the <em>everything</em>.</p>
 <h3 id="cpp-directives">CPP Directives</h3>
@@ -58,8 +65,9 @@
 <p>The <strong>return statement</strong> tells C that this function is now exiting and returning the stated constant <strong>0</strong>. Usually returning a number from the main function has big significance. It is conventional to return 0 upon a <em>successful</em> completion of a program. Anything else (most commonly 1) means the program encountered an error at some point in execution.</p>
 <h3 id="how-to-compile">How to Compile</h3>
 <p>You’ll need to have a compiler installed. If you’re on Linux or some equivalent, you might already have <strong>gcc</strong> installed. But for the time being, we’ll just stick to using ideone.com, an online compiler. As a matter of fact, the program is online ready for editing and compiling <a href="http://ideone.com/FTzSy9">here</a>. Play around with it if you want and get accustommed to ideone as well.</p>
-<h1 id="well-thats-it-for-now">Well That’s it (For Now)</h1>
+<h2 id="well-thats-it-for-now">Well That’s it (For Now)</h2>
 <p>I’ll be creating what I call <em>specials</em>. These will be posts that talk about things that might be too much to talk about in the tutorial series, but definitely worth checking out. The first one will be coming around sooner than later and will involve installing a C compiler on your system.</p>
+<p>And if you’re a newcomer to programming, be not afraid to drop questions below in the comments. I’ll be more than happy to answer them. Also, the material here was very general, and some of it might seem daunting. I’ll do my best to be as clear and concise in future posts. I’ll be able to afford the extra elaborations due to keeping things consolidated to certain topics. The next post will be all about data types.</p>
 <p>I also hope that this becomes a do-and-learn experience. I’ll do my best to increase the quality of these posts as much as I can! With that I let you all be and hope that you’ll continue to join me on one hell of an adventure.</p>
 
 <div id="disqus_thread"></div>
@@ -75,12 +83,13 @@ this.page.identifier = "/ucsc-rvallada-intro-to-c/"; // Replace PAGE_IDENTIFIER 
 };
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-s.src = 'https://wolfnode.disqus.com/embed.js';
+s.src = 'https://rvallada.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
 (d.head || d.body).appendChild(s);
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
         </div>
 
         <div id="footer">
