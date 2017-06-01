@@ -33,6 +33,7 @@ div#home-posts-container {
 
 div#home-posts-container h2 {
     text-transform: uppercase;
+    margin-bottom: 0;
 }
 
 div#home-posts-container ul {
