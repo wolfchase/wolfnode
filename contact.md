@@ -1,5 +1,5 @@
 ---
-title: Contact
+title: contact
 ---
 
 <h1>Contact</h1>

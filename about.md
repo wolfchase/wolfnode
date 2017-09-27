@@ -1,12 +1,12 @@
 ---
-title: About
----
+title: about
+...
 
 <h1>About</h1>
 
 ### The Name's Rodolfo
 
-But you can call me Rudy. I'm a UCSC student majoring in Computer Science with
+But you can call me Rudy. Im a UCSC student majoring in Computer Science with
 a minor in Computer Engineering. It is not official if that's what my degree's
 fine print will be, but time will tell.
 

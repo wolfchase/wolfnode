@@ -1,5 +1,5 @@
 ---
-title: Resume
+title: resume
 ---
 <h1>Resume</h1>
 <div class="info"> Last Updated: May 31, 2017</div>

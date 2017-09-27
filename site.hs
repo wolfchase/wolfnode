@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           System.Random
 import           System.IO
 import           Data.Monoid (mappend)
 import           Hakyll
+import qualified GHC.IO.Encoding as E
 
 
 --------------------------------------------------------------------------------
 main :: IO ()
-main = hakyll $ do
+main = E.setLocaleEncoding E.utf8 >> (hakyll $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler
@@ -25,31 +25,17 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.md", "contact.md", "resume.md"]) $ do
+    match (fromList ["about.md", "contact.md", "resume.md", "projects.md"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
     
-    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
-    tagsRules tags $ \tag pattern -> do
-        let title = "Posts tagged \"" ++ tag ++ "\""
-        route idRoute
-        compile $ do
-            posts <- recentFirst =<< loadAll pattern
-            let ctx = constField "title" title
-                      `mappend` listField "posts" postCtx (return posts)
-                      `mappend` defaultContext
-            makeItem ""
-                >>= loadAndApplyTemplate "templates/tag.html" ctx
-                >>= loadAndApplyTemplate "templates/default.html" ctx
-                >>= relativizeUrls
-
     match "posts/*" $ do
         route $ setExtension "html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html"    (postCtxWithTags tags)
-            >>= loadAndApplyTemplate "templates/default.html" (postCtxWithTags tags)
+            >>= loadAndApplyTemplate "templates/post.html"    postCtx
+            >>= loadAndApplyTemplate "templates/default.html" postCtx
             >>= relativizeUrls
 
     create ["archive.html"] $ do
@@ -82,6 +68,7 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
+    )
 
 
 --------------------------------------------------------------------------------

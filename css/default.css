@@ -172,3 +172,7 @@ div.info {
     font-size: 14px;
     text-align: center;
 }
+
+div.link-center {
+    text-align: center;
+}
