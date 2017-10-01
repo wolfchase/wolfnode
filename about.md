@@ -42,14 +42,3 @@ after I've called it quits.
 
 I sit in front of a monitor writing about things when I really should just be
 studying.
-
-### "I Doubt the Credit of Your Tutorials"
-
-Bah, I do too. That's why I got that fancy disqus commentary stuff going. People
-tell me I'm a pretty good 'teacher.' So I said fu** it, why not write some
-tutorial series and reinforce my learning while others get to learn new things!
-It is a win win in my opinion.  That rhymed a little.
-
-Anyhow, try them out and if they end up being useless to you, let me know why
-in the comments. If you have a contradictory case, also post that. I'd like to
-hear both positives and negatives!
