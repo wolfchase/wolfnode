@@ -8,7 +8,7 @@ title: contact
 
 ### Email
 
-Send emails to **rvallada@ucsc.edu.** This is my **preferred way** of 
+Send emails to **rcvallada@gmail.com** This is my **preferred way** of 
 communication with people I don't know all to well. 
 
 If I don't know who you are and you attempt contacting me by informal mediums, 
