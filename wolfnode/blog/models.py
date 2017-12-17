@@ -1,3 +1,22 @@
 from django.db import models
 
-# Create your models here.
+
+class Tag(models.Model):
+    tag = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.tag
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=50)
+    tags = models.ManyToManyField(Tag)
+    content = models.TextField(blank=True)
+    publish_date = models.DateField()
+    edit_date = models.DateField()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['publish_date']
