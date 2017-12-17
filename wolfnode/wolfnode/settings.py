@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'blog.apps.BlogConfig'
+    'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'markdownify',
 ]
 
 MIDDLEWARE = [
@@ -119,3 +121,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MARKDOWNIFY_WHITELIST_TAGS = [
+    'h1',
+    'h2',
+    'h3',
+    'a',
+    'abbr',
+    'acronym',
+    'b',
+    'blockquote',
+    'em',
+    'i',
+    'li',
+    'ol',
+    'p',
+    'strong',
+    'ul'
+]

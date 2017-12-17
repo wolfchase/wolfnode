@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+{% block title %}WN | {{ post.title }}{% endblock %}
+{% block content %}
+    {% load markdownify %}
+    <h3>{{ post.title }}</h3>
+    <article>
+        {{ post.content|markdownify }}
+    </article>
+{% endblock %}
