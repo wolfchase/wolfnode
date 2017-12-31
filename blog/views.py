@@ -10,6 +10,10 @@ def post(request, post_id=0):
     try:
         post_q = Post.objects.get(pk=post_id)
     except Post.DoesNotExist:
-       raise Http404()
+        raise Http404()
 
     return render(request, 'blog/post.html', {'post': post_q})
+
+
+def index(request):
+    return render(request, 'blog/index.html')
