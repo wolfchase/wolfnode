@@ -1,0 +1,16 @@
+@import "partials/base";
+
+header#site-top {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+
+  margin-top: 70px;
+
+  width: 100%;
+}
+
+h1 {
+  font-family: $base-font-family-header;
+}

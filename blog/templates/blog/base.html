@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
+
+    {% load static %}
+    {% load compress %}
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    {% compress css %}
+    <link href="{% static 'blog/css/app.scss' %}" rel="stylesheet" type="text/x-scss"/>
+    {% block css %}{% endblock %}
+    {% endcompress %}
+
+    {% compress js %}
+    <script type="text/javascript" src="{% static 'blog/../../static/blog/js/test.js' %}"></script>
+    {% endcompress %}
 </head>
 
 <body>
-{% block content %}{% endblock %}
-{% block footer %}
-    <hr>
-    <p>wolfnode!</p>
-{% endblock %}
+    <!-- Begin site header -->
+    <section id="site-header">
+        <div id="site-logo">
+            <img src="{% static 'blog/img/nerdonlinux.png' %}"/>
+        </div>
+        <div id="site-nav">
+            <ul>
+            {% for page in pages %}
+                <li><a href="{{ page.link }}">{{ page.name|upper }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <!-- End site header -->
+
+    <!-- Begin site content -->
+    <section id="content">
+        {% block content %}{% endblock %}
+    </section>
+    <!-- End site header -->
+
+    <!-- Begin site footer -->
+    <section id="site-footer">
+        ©2017 Rodolfo Castillo-Valladares | Site powered by Django
+        <br>
+        Artwork by the one and only, Oskar Alfaro.
+    </section>
+    <!-- End site footer -->
 </body>
 </html>

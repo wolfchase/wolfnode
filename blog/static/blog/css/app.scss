@@ -1,0 +1,48 @@
+@import "partials/base";
+@import "partials/font";
+
+body {
+  margin: 0em auto 0em auto;
+  padding: 0.3em;
+
+  min-width: 18em;
+  max-width: 40em;
+
+  color: $base-font-color;
+  font-family: $base-font-family-text;
+  font-size: 1.2em;
+}
+
+section#site-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0.15em;
+  padding: 0.06em 0em 0.06em 0em;
+
+  #site-logo img {
+    width: 6em;
+  }
+
+  #site-nav {
+    text-align: right;
+
+    ul li {
+      // TODO: Remove the use of float left. A switch to flex display
+      //       on the ul parent could potentially fix the problem.
+      float: left;
+      margin-left: 2em;
+      list-style-type: none;
+
+      a {
+        color: $base-font-color;
+        font-family: $base-font-family-header;
+        fontsize: 0.09em;
+        letter-spacing: 0.02em;
+
+        text-decoration: none;
+      }
+    }
+  }
+}

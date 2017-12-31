@@ -1,0 +1,17 @@
+@import "compass";
+
+// URL for static
+// Ensure this variable is changed for production
+$base-static-url: "../../";
+
+// Font Weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Font Colors
+$base-font-color: #3e3f3a;
+
+// Base Font
+$base-font-family-header: Mission Gothic;
+$base-font-family-text: Open Sans;

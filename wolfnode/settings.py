@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+
+    # Django apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # pip apps
     'markdownify',
+    'compressor',
+    'django_libsass_compass_mixins',
 ]
 
 MIDDLEWARE = [
@@ -65,6 +70,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # Apps
+                'blog.context_processors.static_vars',
             ],
         },
     },
@@ -122,6 +130,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = '../compiledcss'
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    # other finders..
+    'compressor.finders.CompressorFinder',
+)
+
 MARKDOWNIFY_WHITELIST_TAGS = [
     'h1',
     'h2',
@@ -137,5 +158,12 @@ MARKDOWNIFY_WHITELIST_TAGS = [
     'ol',
     'p',
     'strong',
-    'ul'
+    'ul',
+    'script',
+]
+
+MARKDOWNIFY_WHITELIST_ATTRS = [
+    'href',
+    'src',
+    'alt',
 ]
