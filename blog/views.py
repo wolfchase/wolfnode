@@ -16,4 +16,9 @@ def post(request, post_id=0):
 
 
 def index(request):
-    return render(request, 'blog/index.html')
+    try:
+        recent_posts_q = Post.objects.order_by("-publish_date")[0:4]
+    except Post.DoesNotExist:
+        raise Http404()
+
+    return render(request, 'blog/index.html', {'recent_posts': recent_posts_q})

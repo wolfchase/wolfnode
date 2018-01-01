@@ -5,5 +5,17 @@
     <link href="{% static 'blog/css/index.scss' %}" rel="stylesheet" type="text/x-scss">
 {% endblock %}
 {% block content %}
-
+    <div id="welcome-container">
+        <p>Welcome to Rodolfo's personal slice of the internet!</p>
+    </div>
+    <div id="recent-posts-container">
+        <h1>Recent Posts</h1>
+        <ul>
+            {% for post in recent_posts %}
+                <li>
+                    <a href="/post/{{ post.pk }}">{{ post.title }}</a><span id="post-publish-date">{{ post.publish_date }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}
