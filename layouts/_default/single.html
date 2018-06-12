@@ -1,0 +1,13 @@
+<!doctype HTML>
+<html lang="en">
+    {{ partial "head/metadata.html" . }}
+    <title>{{ .Params.Htitle }}</title>
+    {{ partial "head/css.html" . }}
+</html>
+<body>
+    {{ partial "header/site-header.html" . }}
+    <div id="content">
+        {{ .Content }}
+    </div>
+    {{ partial "footer/site-footer.html" . }}
+</body>

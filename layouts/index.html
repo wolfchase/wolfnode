@@ -1,0 +1,22 @@
+<!doctype HTML>
+<html lang="en">
+    {{ partial "head/metadata.html" . }}
+    <title>{{ .Params.Htitle }}</title>
+    {{ partial "head/css.html" . }}
+</html>
+<body>
+    {{ partial "header/site-header.html" . }}
+    <div id="content">
+        <p class="home-p">Welcome to Rodolfo's personal slice of the internet!</p>
+
+        <div id="home-posts-container">
+            <h2>Recent Posts</h2>
+            <ul>
+            {{ range first 4 (where .Site.RegularPages "Section" "==" "blog") }}
+                <li><a href="{{ .Permalink }}">{{ .Title }}</a><span class="post-date">{{ .Date.Format "May 2, 2006" }}</span></li>
+            {{ end }}
+            </ul>
+        </div>
+    </div>
+    {{ partial "footer/site-footer.html" . }}
+</body>

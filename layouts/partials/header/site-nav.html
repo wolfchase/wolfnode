@@ -1,0 +1,6 @@
+<nav id="navigation">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+        <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "Main" .) ($currentPage.HasMenuCurrent "Main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{ end }}
+</nav>

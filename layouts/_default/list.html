@@ -1,0 +1,15 @@
+<!doctype HTML>
+<html lang="en">
+    {{ partial "head/metadata.html" . }}
+    <title>{{ .Params.Htitle }}</title>
+    {{ partial "head/css.html" . }}
+</html>
+<body>
+    {{ partial "header/site-header.html" . }}
+    {{ range .Data.Pages }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    </li>
+    {{ end }}
+    {{ partial "footer/site-footer.html" . }}
+</body>

@@ -2,7 +2,6 @@
 date: {{ .Date }}
 draft: true
 type: 
-title: 
 htitle: 
 menu:
     main:
@@ -11,4 +10,3 @@ menu:
         parent: 
         weight: 
 ---
-
