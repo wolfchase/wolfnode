@@ -1,6 +1,6 @@
 ---
 date: 2018-06-11T22:53:01-07:00
-draft: true
+draft: false
 htitle: Blog Posts
 menu:
     main:
