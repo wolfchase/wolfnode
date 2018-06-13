@@ -15,10 +15,10 @@ in the process!
 The original plan was to port to Django, so that I could learn it more 
 thoroughly. However, the process was becoming rather slow and shortcoming. I
 wanted to learn about a lot of things, front and back-end. This kept me from
-just focusing on getting the site ported, also most of the subjects I dwelved
-were to much for what my personal website demanded.
+just focusing on getting the site ported; most of the subjects I dwelved
+into were too much for what my personal website demanded.
 
-Also hosting the website would be more problematic and beneficial in the end,
+Also, hosting the website would be more problematic and beneficial in the end,
 since most of the requirements are satisfied via a static site.
 
 ### Static it is
