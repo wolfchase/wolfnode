@@ -54,7 +54,7 @@ div#home-posts-container ul .post-date {
 
 div#header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
@@ -81,6 +81,11 @@ div#header #navigation a {
     text-decoration: none;
 }
 
+div#header #quote p {
+    margin: 0;
+    font-size: 12px;
+}
+
 div#footer {
     color: #555;
     font-size: 12px;
@@ -100,38 +105,40 @@ div#content p {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    text-align: justify;
     color: #3b3b3b;
 }
 
 div#content h1 {
+    padding: 5px;
     font-family: Mission Gothic;
     letter-spacing: 0.02em;
-    color: #147294;
+    color: #47adc2;
     font-weight: normal;
     font-size: 40px;
     text-transform: uppercase;
-    text-align: center;
 }
 
 
 div#content h1#home {
     font-family: Roboto Mono;
-    color: #147294;
+    color: #47adc2;
     font-weight: normal;
     font-size: 40px;
 }
 
 div#content h2 {
+    padding: 5px;
     font-family: Mission Gothic;
     letter-spacing: 0.02em;
-    color: #147294;
+    color: #47adc2;
     font-weight: normal;
     font-size: 30px;
 }
 
 div#content h3 {
-    border-left: 5px solid lightblue;
+    margin: 10px;
+    padding: 5px;
+    border-left: 5px solid #47adc2;
     padding-left: 10px;
     font-family: Mission Gothic;
     letter-spacing: 0.02em;
@@ -148,7 +155,7 @@ div#content p.home-p {
 }
 
 div#content code {
-    color: #105a75;
+    color: #47adc2;
 }
 
 div#resume {
@@ -156,7 +163,7 @@ div#resume {
 }
 
 #resume-href {
-    color:#105a75 !important;
+    color: #47adc2 !important;
 }
 
 h1 {
