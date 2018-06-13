@@ -7,7 +7,7 @@ menu:
     Main:
         title: About
         name: About
-        weight: 2
+        weight: 3
 ---
 
 <h1>About</h1>

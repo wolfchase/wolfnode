@@ -1,6 +1,6 @@
 ---
 date: 2018-06-11T22:37:28-07:00
-draft: true
+draft: false
 type: static
 title: Contact
 htitle: Contact

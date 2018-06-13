@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 date: 2018-06-11T22:36:00-07:00
-draft: true
+draft: false
 type: static
 title: Projects
 htitle: Projects
