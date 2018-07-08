@@ -37,7 +37,7 @@ looked limited. And I couldn't have been more wrong.
 
 ### Hugo is Cool
 
-It took me a a few hours to get to grips with (and quite haven't yet), but
+It took me a few hours to get to grips with (and quite haven't yet), but
 after playing with Hugo and realizing its actual potential, I went ahead with
 the port.
 
